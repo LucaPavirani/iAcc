@@ -240,7 +240,7 @@ class SerialWorker(QRunnable):
                 
                 # Threshold computation
                 self.threshold_wi=self.calibration_threshold_HR(var.zData_windowed_HR)
-                self.delta_HR = 13
+                self.delta_HR = 17
 
                 # Number of peaks detected in the defined time window
                 self.n_peaks_HR, var.i_peaks_HR  = self.find_peaks(var.zData_windowed_HR, self.threshold_wi, 
@@ -248,26 +248,28 @@ class SerialWorker(QRunnable):
                 
                 var.stop_HR = time.time()
                 var.timediff_HR = var.stop_HR - var.start_HR
+                print('tempo',var.timediff_HR)
                 
                 var.stop_HR = 0
                 var.start_HR = 0
                 var.flagstart_HR = 0
 
                 # HR calculation
+                var.HR_old = var.HR_value
                 var.HR_value= (self.n_peaks_HR * 60)/ var.timediff_HR
                 var.HR_save = np.append(var.HR_save, var.HR_value)  # array in which we save the data to be exported
                 var.count_sec_HR = 0
 
-                
+                '''
                 # Plot showing the filtered data in the defined window
-
                 plt.figure(1)
                 plt.plot(var.zData_windowed_HR, label = 'zData_windowed')
                 plt.plot(var.i_peaks_HR,var.zData_windowed_HR[var.i_peaks_HR], "x")
                 plt.axhline(y = self.threshold_wi, color = 'r', linestyle = '-')
                 plt.title('Filtered Signal for Heart Rate')
                 plt.show()
-                
+                '''
+
                 var.count_HR+=var.SECOND
                 var.flag_graph_HR = True
                 var.flag_HR = True
@@ -319,12 +321,12 @@ class SerialWorker(QRunnable):
                 var.flagstart_RR=0
 
                 # RR calculation
-                
+                var.RR_old = var.RR_value
                 var.RR_value= (self.n_peaks_bp_RR* 60)/ var.timediff_RR
                 var.RR_save = np.append(var.RR_save, var.RR_value)  # array in which we save the data to be exported
                 var.count_sec_RR = 0
                 
-                
+                '''
                 # Plot showing the filtered data in the defined window
                 plt.figure(2)
                 plt.plot(var.zData_bandpass_RR, label = 'zData Bandpass detrended')
@@ -332,6 +334,7 @@ class SerialWorker(QRunnable):
                 plt.axhline(y = self.threshold_RR, color = 'r', linestyle = '-')
                 plt.title('Filtered Signal for Respiratory rate')   
                 plt.show()
+                '''
                 
                 var.count_RR+=var.SECOND
                 var.flag_graph_RR = True
