@@ -1,0 +1,7 @@
+D:\Download\AY2122_II_Project-4\PSoC Code\AY2122_II\Main.cydsn\Main.cyprj|92f4e634-0d10-4296-ae90-ec5a783f5789
+K:\Programmi\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|a27785ad-8b94-461e-9458-ebcb23d6a91e
+C:\Users\umber\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|9736f852-db98-40bc-b50f-49ba00963eb3
+K:\Programmi\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|459ddda0-a3a4-4566-b9b4-9f5d34ec2abf
+K:\Programmi\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|ee4f9c78-611b-4117-8c00-e02d97c6c90d
+K:\Programmi\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|9d953bb6-8f85-46f6-bacf-2b192e2b57c8
+D:\Download\PSoC_AnnotationLibrary\AnnotationLibrary\AnnotationLibrary_lib\AnnotationLibrary_lib.cylib\AnnotationLibrary_lib.cyprj|dc739741-2716-4bf8-80f8-1cc56743f989
